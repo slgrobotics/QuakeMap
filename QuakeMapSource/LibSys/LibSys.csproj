@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D60F9758-035C-4290-B291-B2DA2E32FBC3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LibSys</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LibSys</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CamPos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsFolderBrowser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CmdRunner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodedTextReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodedTextWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommSettings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CreateInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DatedEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DictionaryEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DirectionPadControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgMigrateTerraFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgUpgradeMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileAssociation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormattedFileDescr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GeoTiff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GrayscaleQuantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEnableDisable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ImageCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMainCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IOSerial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITickable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitored.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyCacheable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyDataGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyFileOrFolder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyTimeZone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OctreeQuantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaletteQuantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PalmPdbFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PhotoDescr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PhotoViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PopupWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Quantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SnapList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SortableDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StatusBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThreadKillable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThreadPool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThreadPool2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TimeFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebPageGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebsafeGrayscaleQuantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebsafeQuantizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="DictionaryEditorControl.resx">
+      <DependentUpon>DictionaryEditorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectionPadControl.resx">
+      <DependentUpon>DirectionPadControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgMigrateTerraFolder.resx">
+      <DependentUpon>DlgMigrateTerraFolder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgUpgradeMessage.resx">
+      <DependentUpon>DlgUpgradeMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorBoxForm.resx">
+      <DependentUpon>ErrorBoxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphControl.resx">
+      <DependentUpon>GraphControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyDataGrid.resx">
+      <DependentUpon>MyDataGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFileOrFolder.resx">
+      <DependentUpon>MyFileOrFolder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyTimePicker.resx">
+      <DependentUpon>MyTimePicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoViewerControl.resx">
+      <DependentUpon>PhotoViewerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupWindow.resx">
+      <DependentUpon>PopupWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.resx">
+      <DependentUpon>Project.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

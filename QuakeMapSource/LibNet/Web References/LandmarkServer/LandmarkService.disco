@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://msrmaps.com/LandmarkService.asmx?wsdl" docRef="http://msrmaps.com/LandmarkService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://msrmaps.com/LandmarkService.asmx" xmlns:q1="http://terraserver-usa.com/LandmarkServer/" binding="q1:LandmarkServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://msrmaps.com/LandmarkService.asmx" xmlns:q2="http://terraserver-usa.com/LandmarkServer/" binding="q2:LandmarkServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

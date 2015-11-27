@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0071FD54-6263-43CC-8B95-DCC875AEB4AB}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LibGps</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LibGps</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\LibFormats\LibFormats.csproj">
+      <Project>{14D89990-AFAC-45EF-94DD-878A3D37E2AE}</Project>
+      <Name>LibFormats</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibGeo\LibGeo.csproj">
+      <Name>LibGeo</Name>
+      <Project>{384554D5-8C91-46B3-87DE-E0839A6FB335}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibSys\LibSys.csproj">
+      <Name>LibSys</Name>
+      <Project>{D60F9758-035C-4290-B291-B2DA2E32FBC3}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllGpsDevices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DlgPortSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GarminGpsButtonPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GarminLegacyDevices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GarminProtoAppLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GarminProtoDef.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GarminProtoLinkLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GarminProtoLinkProtocols.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GarminProtoPhysicalLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GpsBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GpsButtonPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GpsException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GpsGarmin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GpsGarminEtrexVista.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GpsMagellan.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GpsNmea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MagellanGpsButtonPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MagellanProtoAppLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MagellanProtoDef.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MagellanProtoLinkLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MagellanProtoPhysicalLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NmeaGpsButtonPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NmeaProtoAppLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NmeaProtoLinkLayer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="DlgPortSettings.resx">
+      <DependentUpon>DlgPortSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GarminGpsButtonPanelControl.resx">
+      <DependentUpon>GarminGpsButtonPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GpsButtonPanelControl.resx">
+      <DependentUpon>GpsButtonPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagellanGpsButtonPanelControl.resx">
+      <DependentUpon>MagellanGpsButtonPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NmeaGpsButtonPanelControl.resx">
+      <DependentUpon>NmeaGpsButtonPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

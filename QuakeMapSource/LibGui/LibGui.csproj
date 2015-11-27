@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A78F70AC-A24A-4C1E-B4EB-57312575E82C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>LibGui</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LibGui</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\LibFormats\LibFormats.csproj">
+      <Name>LibFormats</Name>
+      <Project>{14D89990-AFAC-45EF-94DD-878A3D37E2AE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibGeo\LibGeo.csproj">
+      <Name>LibGeo</Name>
+      <Project>{384554D5-8C91-46B3-87DE-E0839A6FB335}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibGps\LibGps.csproj">
+      <Name>LibGps</Name>
+      <Project>{0071FD54-6263-43CC-8B95-DCC875AEB4AB}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibNet\LibNet.csproj">
+      <Name>LibNet</Name>
+      <Project>{339B5215-C811-4B5A-B781-C59595BDEA3F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibSys\LibSys.csproj">
+      <Name>LibSys</Name>
+      <Project>{D60F9758-035C-4290-B291-B2DA2E32FBC3}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CameraManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CameraTrack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomMapsCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EarthquakesCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GoogleEarthManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphByTimeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ILocationWatcher.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Layer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LayerBasicMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LayerCustomMaps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LayerEarhquakes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LayersManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LayerTerraserver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LayerVehicles.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LayerWaypoints.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PhotoWaypoints.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PictureManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProgressMonitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProgressMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TerraserverCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ThreadGpsControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TileCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TileSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TileSetTerra.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TileSetTerraLayout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TileTerra.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrackProfileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VehicleGps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehiclesCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WaypointsCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="GraphByTimeControl.resx">
+      <DependentUpon>GraphByTimeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressMonitorForm.resx">
+      <DependentUpon>ProgressMonitorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackProfileControl.resx">
+      <DependentUpon>TrackProfileControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

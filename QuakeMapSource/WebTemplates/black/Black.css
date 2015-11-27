@@ -1,0 +1,69 @@
+body 
+{
+	font-family: verdana,arial,helvetica; 
+	font-size: 12px; 
+	background-color: #000000;
+	background-image: url("black.jpg");
+	color: #e0e0e0;
+}
+
+a:link {color:"#e0e0e0";}
+a:visited {color:"#e0e0e0";}
+a:hover {color:"#ffffff";}
+
+
+.annotation
+{
+	font-size: 12px;
+}
+
+.navigation
+{
+	font-size: 10px;
+}
+
+.title
+{
+	color: #F0F000;
+	font-size: 20px;
+}
+
+.footer
+{
+	font-size: 10px;
+}
+
+.description
+{
+	font-size: 12px;
+}
+
+
+#title
+{
+	background-color: #303030;
+	border: #680808 1px solid;
+	padding: 5px;
+}
+
+#navigation
+{
+	background-color: #000000;
+	border: #ffffff 1px solid;
+	padding: 5px;
+}
+
+#content 
+{
+}
+
+#description
+{
+	background-color: #000000;
+	border: #ffffff 1px solid;
+	padding: 5px;
+}
+
+#footer
+{
+}

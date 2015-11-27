@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CFD4704-EFF5-4C37-A5C7-F416A3988250}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WindowsTiler</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WindowsTiler</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CookComputing.XmlRpc">
+      <Name>CookComputing.XmlRpc</Name>
+      <HintPath>..\ExternalLibs\CookComputing.XmlRpc.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotoPropertiesLibrary">
+      <Name>PhotoPropertiesLibrary</Name>
+      <HintPath>..\ExternalLibs\PhotoPropertiesLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\LibFormats\LibFormats.csproj">
+      <Name>LibFormats</Name>
+      <Project>{14D89990-AFAC-45EF-94DD-878A3D37E2AE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibGeo\LibGeo.csproj">
+      <Name>LibGeo</Name>
+      <Project>{384554D5-8C91-46B3-87DE-E0839A6FB335}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibGps\LibGps.csproj">
+      <Name>LibGps</Name>
+      <Project>{0071FD54-6263-43CC-8B95-DCC875AEB4AB}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibGui\LibGui.csproj">
+      <Name>LibGui</Name>
+      <Project>{A78F70AC-A24A-4C1E-B4EB-57312575E82C}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibNet\LibNet.csproj">
+      <Name>LibNet</Name>
+      <Project>{339B5215-C811-4B5A-B781-C59595BDEA3F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\LibSys\LibSys.csproj">
+      <Name>LibSys</Name>
+      <Project>{D60F9758-035C-4290-B291-B2DA2E32FBC3}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\XmlRpcSmugmugLib\XmlRpcSmugmugLib.csproj">
+      <Name>XmlRpcSmugmugLib</Name>
+      <Project>{E0171D98-7766-4AB5-8084-83D3B0CD8F2F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Api.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClickMapGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DlgControls\MapWizardStep1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgControls\MapWizardStep2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgControls\MapWizardStep3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgControls\MapWizardStep4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgControls\PdaExportOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgControls\PdaHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DlgCustomMapsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgDepthCc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgDisableProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEarthquakesHistorical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEarthquakesManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEditWaypoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgFavoritesAddTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgFavoritesOrganize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgGpsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgGreeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgMakeWaypoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgNewRouteParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPdaExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPdaHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPdaMapWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPhotoDraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPhotoFullSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPhotoManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPhotoToGeotiff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPreloadTiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPreloadTilesAlongRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgToolManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgWaypointsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgWeeklyCacheImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgZipcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileAndZipIO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GotoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KmlOptionsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpacityPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsLandmarksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoGalleryIO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PhotoPropertiesPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebPageExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgControls\MapWizardStep1.resx">
+      <DependentUpon>MapWizardStep1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgControls\MapWizardStep2.resx">
+      <DependentUpon>MapWizardStep2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgControls\MapWizardStep3.resx">
+      <DependentUpon>MapWizardStep3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgControls\MapWizardStep4.resx">
+      <DependentUpon>MapWizardStep4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgControls\PdaExportOptions.resx">
+      <DependentUpon>PdaExportOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgCustomMapsManager.resx">
+      <DependentUpon>DlgCustomMapsManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDepthCc.resx">
+      <DependentUpon>DlgDepthCc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDisableProgram.resx">
+      <DependentUpon>DlgDisableProgram.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEarthquakesHistorical.resx">
+      <DependentUpon>DlgEarthquakesHistorical.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEarthquakesManager.resx">
+      <DependentUpon>DlgEarthquakesManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEditWaypoint.resx">
+      <DependentUpon>DlgEditWaypoint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEula.resx">
+      <DependentUpon>DlgEula.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgFavoritesAddTo.resx">
+      <DependentUpon>DlgFavoritesAddTo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgFavoritesOrganize.resx">
+      <DependentUpon>DlgFavoritesOrganize.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgGpsManager.resx">
+      <DependentUpon>DlgGpsManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgGreeting.resx">
+      <DependentUpon>DlgGreeting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgMakeWaypoint.resx">
+      <DependentUpon>DlgMakeWaypoint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgNewRouteParameters.resx">
+      <DependentUpon>DlgNewRouteParameters.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPdaExport.resx">
+      <DependentUpon>DlgPdaExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPdaHelp.resx">
+      <DependentUpon>DlgPdaHelp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPdaMapWizard.resx">
+      <DependentUpon>DlgPdaMapWizard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPhotoDraw.resx">
+      <DependentUpon>DlgPhotoDraw.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPhotoFullSize.resx">
+      <DependentUpon>DlgPhotoFullSize.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPhotoManager.resx">
+      <DependentUpon>DlgPhotoManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPhotoToGeotiff.resx">
+      <DependentUpon>DlgPhotoToGeotiff.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPreloadTiles.resx">
+      <DependentUpon>DlgPreloadTiles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPreloadTilesAlongRoute.resx">
+      <DependentUpon>DlgPreloadTilesAlongRoute.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgToolManager.resx">
+      <DependentUpon>DlgToolManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgUpdate.resx">
+      <DependentUpon>DlgUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgWaypointsManager.resx">
+      <DependentUpon>DlgWaypointsManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgWeeklyCacheImport.resx">
+      <DependentUpon>DlgWeeklyCacheImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgZipcode.resx">
+      <DependentUpon>DlgZipcode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileExportForm.resx">
+      <DependentUpon>FileExportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileImportForm.resx">
+      <DependentUpon>FileImportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GotoForm.resx">
+      <DependentUpon>GotoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageExportForm.resx">
+      <DependentUpon>ImageExportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KmlOptionsPopup.resx">
+      <DependentUpon>KmlOptionsPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpacityPopup.resx">
+      <DependentUpon>OpacityPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsLandmarksForm.resx">
+      <DependentUpon>OptionsLandmarksForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoPropertiesPopup.resx">
+      <DependentUpon>PhotoPropertiesPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebPageExportForm.resx">
+      <DependentUpon>WebPageExportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="App.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

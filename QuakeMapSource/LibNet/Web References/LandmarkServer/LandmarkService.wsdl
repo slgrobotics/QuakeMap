@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://terraserver-usa.com/LandmarkServer/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://terraserver-usa.com/LandmarkServer/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Landmark Web Service</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://terraserver-usa.com/LandmarkServer/">
+      <s:element name="GetLandmarkTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLandmarkTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLandmarkTypesResult" type="tns:ArrayOfLandmarkType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLandmarkType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LandmarkType" type="tns:LandmarkType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LandmarkType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ShapeType" type="tns:ShapeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ShapeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Null" />
+          <s:enumeration value="Point" />
+          <s:enumeration value="PolyLine" />
+          <s:enumeration value="Polygon" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CountOfLandmarkPointsByRect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="rect" type="tns:BoundingRect" />
+            <s:element minOccurs="0" maxOccurs="1" name="types" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BoundingRect">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UpperLeft" type="tns:LonLatPt" />
+          <s:element minOccurs="1" maxOccurs="1" name="LowerRight" type="tns:LonLatPt" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LonLatPt">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Lon" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lat" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CountOfLandmarkPointsByRectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CountOfLandmarkPointsByRectResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLandmarkPointsByRect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="rect" type="tns:BoundingRect" />
+            <s:element minOccurs="0" maxOccurs="1" name="types" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLandmarkPointsByRectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLandmarkPointsByRectResult" type="tns:ArrayOfLandmarkPoint" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLandmarkPoint">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LandmarkPoint" nillable="true" type="tns:LandmarkPoint" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LandmarkPoint">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LandmarkBase">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Point" type="tns:LonLatPt" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LandmarkBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FipsCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShapeType" type="tns:ShapeType" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CountOfLandmarkShapesByRect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="rect" type="tns:BoundingRect" />
+            <s:element minOccurs="0" maxOccurs="1" name="types" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountOfLandmarkShapesByRectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CountOfLandmarkShapesByRectResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLandmarkTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLandmarkTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetLandmarkTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLandmarkTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CountOfLandmarkPointsByRectSoapIn">
+    <wsdl:part name="parameters" element="tns:CountOfLandmarkPointsByRect" />
+  </wsdl:message>
+  <wsdl:message name="CountOfLandmarkPointsByRectSoapOut">
+    <wsdl:part name="parameters" element="tns:CountOfLandmarkPointsByRectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLandmarkPointsByRectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLandmarkPointsByRect" />
+  </wsdl:message>
+  <wsdl:message name="GetLandmarkPointsByRectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLandmarkPointsByRectResponse" />
+  </wsdl:message>
+  <wsdl:message name="CountOfLandmarkShapesByRectSoapIn">
+    <wsdl:part name="parameters" element="tns:CountOfLandmarkShapesByRect" />
+  </wsdl:message>
+  <wsdl:message name="CountOfLandmarkShapesByRectSoapOut">
+    <wsdl:part name="parameters" element="tns:CountOfLandmarkShapesByRectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LandmarkServiceSoap">
+    <wsdl:operation name="GetLandmarkTypes">
+      <wsdl:input message="tns:GetLandmarkTypesSoapIn" />
+      <wsdl:output message="tns:GetLandmarkTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CountOfLandmarkPointsByRect">
+      <wsdl:input message="tns:CountOfLandmarkPointsByRectSoapIn" />
+      <wsdl:output message="tns:CountOfLandmarkPointsByRectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLandmarkPointsByRect">
+      <wsdl:input message="tns:GetLandmarkPointsByRectSoapIn" />
+      <wsdl:output message="tns:GetLandmarkPointsByRectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CountOfLandmarkShapesByRect">
+      <wsdl:input message="tns:CountOfLandmarkShapesByRectSoapIn" />
+      <wsdl:output message="tns:CountOfLandmarkShapesByRectSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LandmarkServiceSoap" type="tns:LandmarkServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLandmarkTypes">
+      <soap:operation soapAction="http://terraserver-usa.com/LandmarkServer/GetLandmarkTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountOfLandmarkPointsByRect">
+      <soap:operation soapAction="http://terraserver-usa.com/LandmarkServer/CountOfLandmarkPointsByRect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLandmarkPointsByRect">
+      <soap:operation soapAction="http://terraserver-usa.com/LandmarkServer/GetLandmarkPointsByRect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountOfLandmarkShapesByRect">
+      <soap:operation soapAction="http://terraserver-usa.com/LandmarkServer/CountOfLandmarkShapesByRect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LandmarkServiceSoap12" type="tns:LandmarkServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLandmarkTypes">
+      <soap12:operation soapAction="http://terraserver-usa.com/LandmarkServer/GetLandmarkTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountOfLandmarkPointsByRect">
+      <soap12:operation soapAction="http://terraserver-usa.com/LandmarkServer/CountOfLandmarkPointsByRect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLandmarkPointsByRect">
+      <soap12:operation soapAction="http://terraserver-usa.com/LandmarkServer/GetLandmarkPointsByRect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountOfLandmarkShapesByRect">
+      <soap12:operation soapAction="http://terraserver-usa.com/LandmarkServer/CountOfLandmarkShapesByRect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LandmarkService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Landmark Web Service</wsdl:documentation>
+    <wsdl:port name="LandmarkServiceSoap" binding="tns:LandmarkServiceSoap">
+      <soap:address location="http://msrmaps.com/LandmarkService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LandmarkServiceSoap12" binding="tns:LandmarkServiceSoap12">
+      <soap12:address location="http://msrmaps.com/LandmarkService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

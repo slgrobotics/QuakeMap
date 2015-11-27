@@ -1,0 +1,74 @@
+body 
+{
+	font-family: verdana,arial,helvetica; 
+	font-size: 12px; 
+	background-color: #EDEDCB;
+	color: #101010;
+	background-image: url("brown1.gif");
+}
+
+a:link {color:"#101010";}
+a:visited {color:"#202020";}
+a:hover {color:"#303030";}
+
+
+.annotation
+{
+	font-size: 12px;
+}
+
+.navigation
+{
+	font-size: 10px;
+}
+
+.title
+{
+	font-size: 18px;
+}
+
+.footer
+{
+	font-size: 10px;
+}
+
+.description
+{
+	font-size: 12px;
+}
+
+
+#title
+{
+	background-color: #EDEDCB;
+	border: #101010 1px solid;
+	padding: 5px;
+}
+
+#navigation
+{
+	background-color: #EDEDCB;
+	border: #101010 1px solid;
+	padding: 5px;
+}
+
+#content 
+{
+	background-color: #CEBFAA;
+	border: #101010 1px solid;
+	background-image: url("brown2.jpg");	
+}
+
+#description
+{
+	background-color: #EDEDCB;
+	border: #101010 1px solid;
+	padding: 5px;
+}
+
+
+
+#footer
+{
+}
+

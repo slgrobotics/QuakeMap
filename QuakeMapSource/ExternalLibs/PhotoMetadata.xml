@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<photoMetadata category="" xmlns="http://tempuri.org/PhotoMetadata.xsd">
+	<!-- -->
+	<!-- The following data is based upon the data within the "Property Item Descriptions" page-->
+	<!-- at http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdicpp/GDI+/GDI+Reference/Constants/ImagePropertyTagConstants/PropertyItemDescriptions.asp -->
+	<!-- which in turn was based upon the Japan Electronic Industry Development Association (JEIDA) standard, -->
+	<!-- revised June 1998 as version 2.1. Portions of the EXIF specification are used with permission of JEIDA. -->
+	<!-- -->
+	<tagMetadata id="0" category="GPS">
+		<name>GPSVersionID</name>
+		<description>Version of the Global Positioning Systems (GPS) IFD, given as 2.0.0.0. 
+		This tag is mandatory when the GpsIFD tag is present. 
+		When the version is 2.0.0.0, the tag value is 0x02000000.</description>
+		<valueOptions>
+			<option key="33554432" value="Version 2.0.0.0" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="1" category="GPS">
+		<name>GPSLatitudeRef</name>
+		<description>Indicates whether the latitude is north or south latitude. 
+		The ASCII value 'N' indicates north latitude, and 'S' is south latitude.</description>
+		<valueOptions>
+			<option key="N" keyType="CHAR" value="North latitude" />
+			<option key="S" keyType="CHAR" value="South latitude" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="2" category="GPS">
+		<name>GPSLatitude</name>
+		<description>Indicates the latitude. The latitude is expressed as three 
+		RATIONAL values giving the degrees, minutes, and seconds, respectively. 
+		When degrees, minutes and seconds are expressed, the format is dd/1,mm/1,ss/1. 
+		When degrees and minutes are used and, for example, fractions of minutes are 
+		given up to two decimal places, the format is dd/1,mmmm/100,0/1.</description>
+	</tagMetadata>
+	<tagMetadata id="3" category="GPS">
+		<name>GPSLongitudeRef</name>
+		<description>Indicates whether the longitude is east or west longitude. 
+		The ASCII value 'E' indicates east longitude, and 'W' is west longitude.</description>
+		<valueOptions>
+			<option key="E" keyType="CHAR" value="East longitude" />
+			<option key="W" keyType="CHAR" value="West longitude" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="4" category="GPS">
+		<name>GPSLongitude</name>
+		<description>Indicates the longitude. The longitude is expressed as three 
+		RATIONAL values giving the degrees, minutes, and seconds, respectively. 
+		When degrees, minutes and seconds are expressed, the format is ddd/1,mm/1,ss/1. 
+		When degrees and minutes are used and, for example, fractions of minutes are 
+		given up to two decimal places, the format is ddd/1,mmmm/100,0/1.</description>
+	</tagMetadata>
+	<tagMetadata id="5" category="GPS">
+		<name>GPSAltitudeRef</name>
+		<description>Reference altitude, in meters.</description>
+		<valueOptions>
+			<option key="0" value="Sea level" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="6" category="GPS">
+		<name>GPSAltitude</name>
+		<description>Altitude, in meters, based on the reference altitude specified by GpsAltitudeRef.</description>
+	</tagMetadata>
+	<tagMetadata id="7" category="GPS">
+		<name>GPSTimeStamp</name>
+		<description>Time as coordinated universal time (UTC). 
+		The value is expressed as three rational numbers that give the hour, minute, and second.</description>
+	</tagMetadata>
+	<tagMetadata id="8" category="GPS">
+		<name>GpsSatellites</name>
+		<description>Specifies the GPS satellites used for measurements. 
+		This tag can be used to specify the ID number, angle of elevation, 
+		azimuth, SNR, and other information about each satellite. 
+		The format is not specified. 
+		If the GPS receiver is incapable of taking measurements, 
+		the value of the tag must be set to NULL.</description>
+	</tagMetadata>
+	<tagMetadata id="9" category="GPS">
+		<name>GpsStatus</name>
+		<description>Specifies the status of the GPS receiver when the image is recorded. 
+		'A' means measurement is in progress, and 'V' means the measurement is Interoperability.</description>
+		<valueOptions>
+			<option key="A" keyType="CHAR" value="Measurement in progress" />
+			<option key="V" keyType="CHAR" value="Measurement Interoperability" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="10" category="GPS">
+		<name>GpsMeasureMode</name>
+		<description>Specifies the GPS measurement mode. 
+		2 specifies 2-D measurement, and 3 specifies 3-D measurement.</description>
+	</tagMetadata>
+	<tagMetadata id="11" category="GPS">
+		<name>GpsDop</name>
+		<description>GPS DOP (data degree of precision). 
+		An HDOP value is written during 2-D measurement, 
+		and a PDOP value is written during 3-D measurement.</description>
+	</tagMetadata>
+	<tagMetadata id="12" category="GPS">
+		<name>GPSSpeedRef</name>
+		<description>Specifies the unit used to express the GPS receiver speed of movement. 
+		K , M , and N represent kilometers per hour, miles per hour, and knots respectively.</description>
+	</tagMetadata>
+	<tagMetadata id="13" category="GPS">
+		<name>GPSSpeed</name>
+		<description>Speed of the GPS receiver movement.</description>
+	</tagMetadata>
+	<tagMetadata id="14" category="GPS">
+		<name>GPSTrackRef</name>
+		<description>Specifies the reference for giving the direction of GPS receiver movement. 
+		T specifies true direction, and M specifies magnetic direction.</description>
+		<valueOptions>
+			<option key="T" keyType="CHAR" value="True direction" />
+			<option key="M" keyType="CHAR" value="Magnetic direction" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="15" category="GPS">
+		<name>GPSTrack</name>
+		<description>Direction of GPS receiver movement. 
+		The range of values is from 0.00 to 359.99.</description>
+	</tagMetadata>
+	<tagMetadata id="16" category="GPS">
+		<name>GPSImgDirRef</name>
+		<description>Specifies the reference for the direction of the image when it is captured. 
+		T specifies true direction, and M specifies magnetic direction.</description>
+		<valueOptions>
+			<option key="T" keyType="CHAR" value="True direction" />
+			<option key="M" keyType="CHAR" value="Magnetic direction" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="17" category="GPS">
+		<name>GPSImgDir</name>
+		<description>Direction of the image when it was captured. 
+		The range of values is from 0.00 to 359.99.</description>
+	</tagMetadata>
+	<tagMetadata id="18" category="GPS">
+		<name>GPSMapDatum</name>
+		<description>Indicates the geodetic survey data used by the GPS receiver. 
+		If the survey data is restricted to Japan, the value of this tag is 'TOKYO' or 'WGS-84'.</description>
+	</tagMetadata>
+	<tagMetadata id="19" category="GPS">
+		<name>GPSDestLatRef</name>
+		<description>Specifies whether the latitude of the destination point is north or south latitude. 
+		N specifies north latitude, and S specifies south latitude.</description>
+		<valueOptions>
+			<option key="N" keyType="CHAR" value="North latitude" />
+			<option key="S" keyType="CHAR" value="South latitude" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20" category="GPS">
+		<name>GPSDestLat</name>
+		<description>Latitude of the destination point. The latitude is expressed 
+		as three rational values giving the degrees, minutes, and seconds respectively. 
+		When degrees, minutes, and seconds are expressed, the format is dd/1, mm/1, ss/1. 
+		When degrees and minutes are used and, for example, fractions of minutes are 
+		given up to two decimal places, the format is dd/1, mmmm/100, 0/1.</description>
+	</tagMetadata>
+	<tagMetadata id="21" category="GPS">
+		<name>GPSDestLongRef</name>
+		<description>Specifies whether the longitude of the destination point is east or west longitude. 
+		E specifies east longitude, and W specifies west longitude.</description>
+		<valueOptions>
+			<option key="E" keyType="CHAR" value="East longitude" />
+			<option key="W" keyType="CHAR" value="West longitude" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="22" category="GPS">
+		<name>GPSDestLong</name>
+		<description>Longitude of the destination point. The longitude is expressed as 
+		three rational values giving the degrees, minutes, and seconds respectively. 
+		When degrees, minutes, and seconds are expressed, the format is ddd/1, mm/1, ss/1. 
+		When degrees and minutes are used and, for example, fractions of minutes are given up 
+		to two decimal places, the format is ddd/1, mmmm/100, 0/1.</description>
+	</tagMetadata>
+	<tagMetadata id="23" category="GPS">
+		<name>GPSDestBearRef</name>
+		<description>Specifies the reference used for giving the bearing to the destination point. 
+		T specifies true direction, and M specifies magnetic direction.</description>
+		<valueOptions>
+			<option key="T" keyType="CHAR" value="True direction" />
+			<option key="M" keyType="CHAR" value="Magnetic direction" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="24" category="GPS">
+		<name>GPSDestBear</name>
+		<description>Bearing to the destination point. 
+		The range of values is from 0.00 to 359.99.</description>
+	</tagMetadata>
+	<tagMetadata id="25" category="GPS">
+		<name>GPSDestDistRef</name>
+		<description>Specifies the unit used to express the distance to the destination point. 
+		'K', 'M', and 'N' represent kilometers, miles, and knots respectively.</description>
+		<valueOptions>
+			<option key="K" keyType="CHAR" value="Kilometers" />
+			<option key="M" keyType="CHAR" value="Miles" />
+			<option key="N" keyType="CHAR" value="Knots" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="26" category="GPS">
+		<name>GPSDestDist</name>
+		<description>Distance to the destination point.</description>
+	</tagMetadata>
+	<tagMetadata id="254" category="">
+		<name>NewSubfileType</name>
+		<description>Type of data in a subfile.</description>
+	</tagMetadata>
+	<tagMetadata id="255" category="">
+		<name>SubfileType</name>
+		<description>Type of data in a subfile.</description>
+	</tagMetadata>
+	<tagMetadata id="256" category="">
+		<name>ImageWidth</name>
+		<description>Number of pixels per row.</description>
+	</tagMetadata>
+	<tagMetadata id="257" category="">
+		<name>ImageHeight</name>
+		<description>Number of pixel rows.</description>
+	</tagMetadata>
+	<tagMetadata id="258" category="">
+		<name>BitsPerSample</name>
+		<description>Number of bits per color component.</description>
+	</tagMetadata>
+	<tagMetadata id="259" category="">
+		<name>Compression</name>
+		<description>Compression scheme used for the image data.</description>
+	</tagMetadata>
+	<tagMetadata id="262" category="">
+		<name>PhotometricInterp</name>
+		<description>How pixel data will be interpreted.</description>
+	</tagMetadata>
+	<tagMetadata id="263" category="">
+		<name>ThreshHolding</name>
+		<description>Technique used to convert from gray pixels to black and white pixels.</description>
+	</tagMetadata>
+	<tagMetadata id="264" category="">
+		<name>CellWidth</name>
+		<description>Width of the dithering or halftoning matrix.</description>
+	</tagMetadata>
+	<tagMetadata id="265" category="">
+		<name>CellHeight</name>
+		<description>Height of the dithering or halftoning matrix.</description>
+	</tagMetadata>
+	<tagMetadata id="266" category="">
+		<name>FillOrder</name>
+		<description>Logical order of bits in a byte.</description>
+	</tagMetadata>
+	<tagMetadata id="269" category="">
+		<name>DocumentName</name>
+		<description>Null-terminated character string that specifies the name of the document from which the image was scanned.</description>
+	</tagMetadata>
+	<tagMetadata id="270" category="">
+		<name>ImageDescription</name>
+		<description>Null-terminated character string that specifies the title of the image.</description>
+	</tagMetadata>
+	<tagMetadata id="271" category="">
+		<name>EquipMake</name>
+		<description>Null-terminated character string that specifies the manufacturer of the equipment used to record the image.</description>
+	</tagMetadata>
+	<tagMetadata id="272" category="">
+		<name>EquipModel</name>
+		<description>Null-terminated character string that specifies the model name or model number of the equipment used to record the image.</description>
+	</tagMetadata>
+	<tagMetadata id="273" category="">
+		<name>StripOffsets</name>
+		<description>For each strip, the byte offset of that strip.</description>
+	</tagMetadata>
+	<tagMetadata id="274" category="">
+		<name>Orientation</name>
+		<description>Image orientation viewed in terms of rows and columns.</description>
+		<valueOptions>
+			<option key="1" value="The 0th row is at the visual top of the image, and the 0th column is the visual left-hand side." />
+			<option key="2" value="The 0th row is at the visual top of the image, and the 0th column is the visual right-hand side." />
+			<option key="3" value="The 0th row is at the visual bottom of the image, and the 0th column is the visual right-hand side." />
+			<option key="4" value="The 0th row is at the visual bottom of the image, and the 0th column is the visual left-hand side." />
+			<option key="5" value="The 0th row is the visual left-hand side of of the image, and the 0th column is the visual top." />
+			<option key="6" value="The 0th row is the visual right-hand side of of the image, and the 0th column is the visual top." />
+			<option key="7" value="The 0th row is the visual right-hand side of of the image, and the 0th column is the visual bottom." />
+			<option key="8" value="The 0th row is the visual left-hand side of of the image, and the 0th column is the visual bottom." />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="277" category="">
+		<name>SamplesPerPixel</name>
+		<description>Number of color components per pixel.</description>
+	</tagMetadata>
+	<tagMetadata id="278" category="">
+		<name>RowsPerStrip</name>
+		<description>Number of rows per strip.</description>
+	</tagMetadata>
+	<tagMetadata id="279" category="">
+		<name>StripBytesCount</name>
+		<description>For each strip, the total number of bytes in that strip.</description>
+	</tagMetadata>
+	<tagMetadata id="280" category="">
+		<name>MinSampleValue</name>
+		<description>For each color component, the minimum value assigned to that component.</description>
+	</tagMetadata>
+	<tagMetadata id="281" category="">
+		<name>MaxSampleValue</name>
+		<description>For each color component, the maximum value assigned to that component.</description>
+	</tagMetadata>
+	<tagMetadata id="282" category="">
+		<name>XResolution</name>
+		<description>Number of pixels per unit in the image width (x) direction. The unit is specified by ResolutionUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="283" category="">
+		<name>YResolution</name>
+		<description>Number of pixels per unit in the image height (y) direction. The unit is specified by ResolutionUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="284" category="">
+		<name>PlanarConfig</name>
+		<description>Whether pixel components are recorded in chunky or planar format.</description>
+	</tagMetadata>
+	<tagMetadata id="285" category="">
+		<name>PageName</name>
+		<description>Null-terminated character string that specifies the name of the page from which the image was scanned.</description>
+	</tagMetadata>
+	<tagMetadata id="286" category="">
+		<name>XPosition</name>
+		<description>Offset from the left side of the page to the left side of the image. The unit of measure is specified by ResolutionUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="287" category="">
+		<name>YPosition</name>
+		<description>Offset from the top of the page to the top of the image. The unit of measure is specified by ResolutionUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="288" category="">
+		<name>FreeOffset</name>
+		<description>For each string of contiguous unused bytes, the byte offset of that string.</description>
+	</tagMetadata>
+	<tagMetadata id="289" category="">
+		<name>FreeByteCounts</name>
+		<description>For each string of contiguous unused bytes, the number of bytes in that string.</description>
+	</tagMetadata>
+	<tagMetadata id="290" category="">
+		<name>GrayResponseUnit</name>
+		<description>Precision of the number specified by GrayResponseCurve. 1 specifies tenths, 2 specifies hundredths, 3 specifies thousandths, and so on.</description>
+	</tagMetadata>
+	<tagMetadata id="291" category="">
+		<name>GrayResponseCurve</name>
+		<description>For each possible pixel value in a grayscale image, the optical density of that pixel value.</description>
+	</tagMetadata>
+	<tagMetadata id="292" category="">
+		<name>T4Option</name>
+		<description>Set of flags that relate to T4 encoding.</description>
+	</tagMetadata>
+	<tagMetadata id="293" category="">
+		<name>T6Option</name>
+		<description>Set of flags that relate to T6 encoding.</description>
+	</tagMetadata>
+	<tagMetadata id="296" category="">
+		<name>ResolutionUnit</name>
+		<description>Unit of measure for the horizontal resolution and the vertical resolution.</description>
+		<valueOptions>
+			<option key="2" value="inches" />
+			<option key="3" value="centimeters" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="297" category="">
+		<name>PageNumber</name>
+		<description>Page number of the page from which the image was scanned.</description>
+	</tagMetadata>
+	<tagMetadata id="301" category="">
+		<name>TransferFunction</name>
+		<description>Tables that specify transfer functions for the image.</description>
+	</tagMetadata>
+	<tagMetadata id="305" category="">
+		<name>SoftwareUsed</name>
+		<description>Null-terminated character string that specifies the name and version of the software or firmware of the device used to generate the image.</description>
+	</tagMetadata>
+	<tagMetadata id="306" category="">
+		<name>DateTime</name>
+		<description>Date and time the image was created.</description>
+	</tagMetadata>
+	<tagMetadata id="315" category="">
+		<name>Artist</name>
+		<description>Null-terminated character string that specifies the name of the person who created the image.</description>
+	</tagMetadata>
+	<tagMetadata id="316" category="">
+		<name>HostComputer</name>
+		<description>Null-terminated character string that specifies the computer and/or operating system used to create the image.</description>
+	</tagMetadata>
+	<tagMetadata id="317" category="">
+		<name>Predictor</name>
+		<description>Type of prediction scheme that was applied to the image data before the encoding scheme was applied.</description>
+	</tagMetadata>
+	<tagMetadata id="318" category="">
+		<name>WhitePoint</name>
+		<description>Chromaticity of the white point of the image.</description>
+	</tagMetadata>
+	<tagMetadata id="319" category="">
+		<name>PrimaryChromaticities</name>
+		<description>For each of the three primary colors in the image, the chromaticity of that color.</description>
+	</tagMetadata>
+	<tagMetadata id="320" category="">
+		<name>ColorMap</name>
+		<description>Color palette (lookup table) for a palette-indexed image.</description>
+	</tagMetadata>
+	<tagMetadata id="321" category="">
+		<name>HalftoneHints</name>
+		<description>Information used by the halftone function</description>
+	</tagMetadata>
+	<tagMetadata id="322" category="">
+		<name>TileWidth</name>
+		<description>Number of pixel columns in each tile.</description>
+	</tagMetadata>
+	<tagMetadata id="323" category="">
+		<name>TileLength</name>
+		<description>Number of pixel rows in each tile.</description>
+	</tagMetadata>
+	<tagMetadata id="324" category="">
+		<name>TileOffset</name>
+		<description>For each tile, the byte offset of that tile.</description>
+	</tagMetadata>
+	<tagMetadata id="325" category="">
+		<name>TileByteCounts</name>
+		<description>For each tile, the number of bytes in that tile.</description>
+	</tagMetadata>
+	<tagMetadata id="332" category="">
+		<name>InkSet</name>
+		<description>Set of inks used in a separated image.</description>
+	</tagMetadata>
+	<tagMetadata id="333" category="">
+		<name>InkNames</name>
+		<description>Sequence of concatenated, null-terminated, character strings that specify the names of the inks used in a separated image.</description>
+	</tagMetadata>
+	<tagMetadata id="334" category="">
+		<name>NumberOfInks</name>
+		<description>Number of inks.</description>
+	</tagMetadata>
+	<tagMetadata id="336" category="">
+		<name>DotRange</name>
+		<description>Color component values that correspond to a 0 percent dot and a 100 percent dot.</description>
+	</tagMetadata>
+	<tagMetadata id="337" category="">
+		<name>TargetPrinter</name>
+		<description>Null-terminated character string that describes the intended printing environment.</description>
+	</tagMetadata>
+	<tagMetadata id="338" category="">
+		<name>ExtraSamples</name>
+		<description>Number of extra color components. For example, one extra component might hold an alpha value.</description>
+	</tagMetadata>
+	<tagMetadata id="339" category="">
+		<name>SampleFormat</name>
+		<description>For each color component, the numerical format (unsigned, signed, floating point) of that component.</description>
+	</tagMetadata>
+	<tagMetadata id="340" category="">
+		<name>SMinSampleValue</name>
+		<description>For each color component, the minimum value of that component.</description>
+	</tagMetadata>
+	<tagMetadata id="341" category="">
+		<name>SMaxSampleValue</name>
+		<description>For each color component, the maximum value of that component.</description>
+	</tagMetadata>
+	<tagMetadata id="342" category="">
+		<name>TransferRange</name>
+		<description>Table of values that extends the range of the transfer function.</description>
+	</tagMetadata>
+	<tagMetadata id="512" category="JPEG">
+		<name>Proc</name>
+		<description>JPEG compression process.</description>
+	</tagMetadata>
+	<tagMetadata id="513" category="JPEG">
+		<name>InterFormat</name>
+		<description>Offset to the start of a JPEG bitstream.</description>
+	</tagMetadata>
+	<tagMetadata id="514" category="JPEG">
+		<name>InterLength</name>
+		<description>Length, in bytes, of the JPEG bitstream.</description>
+	</tagMetadata>
+	<tagMetadata id="515" category="JPEG">
+		<name>RestartInterval</name>
+		<description>Length of the restart interval.</description>
+	</tagMetadata>
+	<tagMetadata id="517" category="JPEG">
+		<name>LosslessPredictors</name>
+		<description>For each color component, a lossless predictor-selection value for that component.</description>
+	</tagMetadata>
+	<tagMetadata id="518" category="JPEG">
+		<name>PointTransforms</name>
+		<description>For each color component, a point transformation value for that component.</description>
+	</tagMetadata>
+	<tagMetadata id="519" category="JPEG">
+		<name>QTables</name>
+		<description>For each color component, the offset to the quantization table for that component.</description>
+	</tagMetadata>
+	<tagMetadata id="520" category="JPEG">
+		<name>DCTables</name>
+		<description>For each color component, the offset to the DC Huffman table (or lossless Huffman table) for that component.</description>
+	</tagMetadata>
+	<tagMetadata id="521" category="JPEG">
+		<name>ACTables</name>
+		<description>For each color component, the offset to the AC Huffman table for that component.</description>
+	</tagMetadata>
+	<tagMetadata id="529" category="">
+		<name>YCbCrCoefficients</name>
+		<description>Coefficients for transformation from RGB to YCbCr image data.</description>
+	</tagMetadata>
+	<tagMetadata id="530" category="">
+		<name>YCbCrSubsampling</name>
+		<description>Sampling ratio of chrominance components in relation to the luminance component.</description>
+	</tagMetadata>
+	<tagMetadata id="531" category="">
+		<name>YCbCrPositioning</name>
+		<description>Position of chrominance components in relation to the luminance component.</description>
+	</tagMetadata>
+	<tagMetadata id="532" category="">
+		<name>REFBlackWhite</name>
+		<description>Reference black point value and reference white point value.</description>
+	</tagMetadata>
+	<tagMetadata id="769" category="">
+		<name>Gamma</name>
+		<description>Gamma value attached to the image. The gamma value is stored as a rational number (pair of long) with a numerator of 100000. For example, a gamma value of 2.2 is stored as the pair (100000, 45455).</description>
+	</tagMetadata>
+	<tagMetadata id="770" category="">
+		<name>ICCProfileDescriptor</name>
+		<description>Null-terminated character string that identifies an ICC profile.</description>
+	</tagMetadata>
+	<tagMetadata id="771" category="">
+		<name>SRGBRenderingIntent</name>
+		<description>How the image should be displayed as defined by the International Color Consortium (ICC).</description>
+		<valueOptions>
+			<option key="0" value="perceptual" />
+			<option key="1" value="relative colorimetric" />
+			<option key="2" value="saturation" />
+			<option key="3" value="absolute colorimetric" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="800" category="">
+		<name>ImageTitle</name>
+		<description>Null-terminated character string that specifies the title of the image.</description>
+	</tagMetadata>
+	<tagMetadata id="20481" category="">
+		<name>ResolutionXUnit</name>
+		<description>Units in which to display horizontal resolution.</description>
+		<valueOptions>
+			<option key="1" value="pixels per inch" />
+			<option key="2" value="pixels per centimeter" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20482" category="">
+		<name>ResolutionYUnit</name>
+		<description>Units in which to display vertical resolution.</description>
+		<valueOptions>
+			<option key="1" value="pixels per inch" />
+			<option key="2" value="pixels per centimeter" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20483" category="">
+		<name>ResolutionXLengthUnit</name>
+		<description>Units in which to display the image width.</description>
+		<valueOptions>
+			<option key="1" value="inches" />
+			<option key="2" value="centimeters" />
+			<option key="3" value="points" />
+			<option key="4" value="picas" />
+			<option key="5" value="columns" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20484" category="">
+		<name>ResolutionYLengthUnit</name>
+		<description>Units in which to display the image height.</description>
+		<valueOptions>
+			<option key="1" value="inches" />
+			<option key="2" value="centimeters" />
+			<option key="3" value="points" />
+			<option key="4" value="picas" />
+			<option key="5" value="columns" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20485" category="">
+		<name>PrintFlags</name>
+		<description>Sequence of one-byte Boolean values that specify printing options.</description>
+	</tagMetadata>
+	<tagMetadata id="20486" category="">
+		<name>PrintFlagsVersion</name>
+		<description>Print flags version.</description>
+	</tagMetadata>
+	<tagMetadata id="20487" category="">
+		<name>PrintFlagsCrop</name>
+		<description>Print flags center crop marks.</description>
+	</tagMetadata>
+	<tagMetadata id="20488" category="">
+		<name>PrintFlagsBleedWidth</name>
+		<description>Print flags bleed width.</description>
+	</tagMetadata>
+	<tagMetadata id="20489" category="">
+		<name>PrintFlagsBleedWidthScale</name>
+		<description>Print flags bleed width scale.</description>
+	</tagMetadata>
+	<tagMetadata id="20490" category="">
+		<name>HalftoneLPI</name>
+		<description>Ink's screen frequency, in lines per inch.</description>
+	</tagMetadata>
+	<tagMetadata id="20491" category="">
+		<name>HalftoneLPIUnit</name>
+		<description>Units for the screen frequency.</description>
+		<valueOptions>
+			<option key="1" value="lines per inch" />
+			<option key="2" value="lines per centimeter" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20492" category="">
+		<name>HalftoneDegree</name>
+		<description>Angle for screen.</description>
+	</tagMetadata>
+	<tagMetadata id="20493" category="">
+		<name>HalftoneShape</name>
+		<description>Shape of the halftone dots.</description>
+		<valueOptions>
+			<option key="0" value="round" />
+			<option key="1" value="ellipse" />
+			<option key="2" value="line" />
+			<option key="3" value="square" />
+			<option key="4" value="cross" />
+			<option key="6" value="diamond" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20494" category="">
+		<name>HalftoneMisc</name>
+		<description>Miscellaneous halftone information.</description>
+	</tagMetadata>
+	<tagMetadata id="20495" category="">
+		<name>HalftoneScreen</name>
+		<description>Boolean value that specifies whether to use the printer's default screens.</description>
+		<valueOptions>
+			<option key="1" value="use printer's default screens" />
+			<option key="2" value="other" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20496" category="">
+		<name>JPEGQuality</name>
+		<description>Private tag used by the Adobe Photoshop format. Not for public use.</description>
+	</tagMetadata>
+	<tagMetadata id="20497" category="">
+		<name>GridSize</name>
+		<description>Block of information about grids and guides.</description>
+	</tagMetadata>
+	<tagMetadata id="20498" category="THUMBNAIL">
+		<name>Format</name>
+		<description>Format of the thumbnail image.</description>
+		<valueOptions>
+			<option key="0" value="raw RGB" />
+			<option key="2" value="JPEG" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20499" category="THUMBNAIL">
+		<name>Width</name>
+		<description>Width, in pixels, of the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20500" category="THUMBNAIL">
+		<name>Height</name>
+		<description>Height, in pixels, of the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20501" category="THUMBNAIL">
+		<name>ColorDepth</name>
+		<description>bits per pixel (BPP) for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20502" category="THUMBNAIL">
+		<name>Planes</name>
+		<description>Number of color planes for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20503" category="THUMBNAIL">
+		<name>RawBytes</name>
+		<description>Byte offset between rows of pixel data.</description>
+	</tagMetadata>
+	<tagMetadata id="20504" category="THUMBNAIL">
+		<name>Size</name>
+		<description>Total size, in bytes, of the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20505" category="THUMBNAIL">
+		<name>CompressedSize</name>
+		<description>Compressed size, in bytes, of the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20506" category="">
+		<name>ColorTransferFunction</name>
+		<description>Table of values that specify color transfer functions.</description>
+	</tagMetadata>
+	<tagMetadata id="20507" category="THUMBNAIL">
+		<name>Data</name>
+		<description>Raw thumbnail bits in JPEG or RGB format. Depends on ThumbnailFormat.</description>
+		<formatInstr>BASE64</formatInstr>
+	</tagMetadata>
+	<tagMetadata id="20512" category="THUMBNAIL">
+		<name>ImageWidth</name>
+		<description>Number of pixels per row in the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20513" category="THUMBNAIL">
+		<name>ImageHeight</name>
+		<description>Number of pixel rows in the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20514" category="THUMBNAIL">
+		<name>BitsPerSample</name>
+		<description>Number of bits per color component in the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20515" category="THUMBNAIL">
+		<name>Compression</name>
+		<description>Compression scheme used for thumbnail image data.</description>
+	</tagMetadata>
+	<tagMetadata id="20516" category="THUMBNAIL">
+		<name>PhotometricInterp</name>
+		<description>How thumbnail pixel data will be interpreted.</description>
+	</tagMetadata>
+	<tagMetadata id="20517" category="THUMBNAIL">
+		<name>ImageDescription</name>
+		<description>Null-terminated character string that specifies the title of the image.</description>
+	</tagMetadata>
+	<tagMetadata id="20518" category="THUMBNAIL">
+		<name>EquipMake</name>
+		<description>Null-terminated character string that specifies the manufacturer of the equipment used to record the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20519" category="THUMBNAIL">
+		<name>EquipModel</name>
+		<description>Null-terminated character string that specifies the model name or model number of the equipment used to record the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20520" category="THUMBNAIL">
+		<name>StripOffsets</name>
+		<description>For each strip in the thumbnail image, the byte offset of that strip.</description>
+	</tagMetadata>
+	<tagMetadata id="20521" category="THUMBNAIL">
+		<name>Orientation</name>
+		<description>Thumbnail image orientation in terms of rows and columns.</description>
+	</tagMetadata>
+	<tagMetadata id="20522" category="THUMBNAIL">
+		<name>SamplesPerPixel</name>
+		<description>Number of color components per pixel in the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20523" category="THUMBNAIL">
+		<name>RowsPerStrip</name>
+		<description>Number of rows per strip in the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20524" category="THUMBNAIL">
+		<name>StripBytesCount</name>
+		<description>For each thumbnail image strip, the total number of bytes in that strip.</description>
+	</tagMetadata>
+	<tagMetadata id="20525" category="THUMBNAIL">
+		<name>ResolutionX</name>
+		<description>Thumbnail resolution in the width direction. The resolution unit is given in ThumbnailResolutionUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="20526" category="THUMBNAIL">
+		<name>ResolutionY</name>
+		<description>Thumbnail resolution in the height direction. The resolution unit is given in ThumbnailResolutionUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="20527" category="THUMBNAIL">
+		<name>PlanarConfig</name>
+		<description>Whether pixel components in the thumbnail image are recorded in chunky or planar format.</description>
+	</tagMetadata>
+	<tagMetadata id="20528" category="THUMBNAIL">
+		<name>ResolutionUnit</name>
+		<description>Unit of measure for the horizontal resolution and the vertical resolution of the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20529" category="THUMBNAIL">
+		<name>TransferFunction</name>
+		<description>Tables that specify transfer functions for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20530" category="THUMBNAIL">
+		<name>SoftwareUsed</name>
+		<description>Null-terminated character string that specifies the name and version of the software or firmware of the device used to generate the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20531" category="THUMBNAIL">
+		<name>DateTime</name>
+		<description>Date and time the thumbnail image was created.</description>
+	</tagMetadata>
+	<tagMetadata id="20532" category="THUMBNAIL">
+		<name>Artist</name>
+		<description>Null-terminated character string that specifies the name of the person who created the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20533" category="THUMBNAIL">
+		<name>WhitePoint</name>
+		<description>Chromaticity of the white point of the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20534" category="THUMBNAIL">
+		<name>PrimaryChromaticities</name>
+		<description>For each of the three primary colors in the thumbnail image, the chromaticity of that color.</description>
+	</tagMetadata>
+	<tagMetadata id="20535" category="THUMBNAIL">
+		<name>YCbCrCoefficients</name>
+		<description>Coefficients for transformation from RGB to YCbCr data for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20536" category="THUMBNAIL">
+		<name>YCbCrSubsampling</name>
+		<description>Sampling ratio of chrominance components in relation to the luminance component for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20537" category="THUMBNAIL">
+		<name>YCbCrPositioning</name>
+		<description>Position of chrominance components in relation to the luminance component for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20538" category="THUMBNAIL">
+		<name>RefBlackWhite</name>
+		<description>Reference black point value and reference white point value for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20539" category="THUMBNAIL">
+		<name>CopyRight</name>
+		<description>Null-terminated character string that contains copyright information for the thumbnail image.</description>
+	</tagMetadata>
+	<tagMetadata id="20624" category="">
+		<name>LuminanceTable</name>
+		<description>Luminance table. The luminance table and the chrominance table are used to control JPEG quality. A valid luminance or chrominance table has 64 entries of type Short. If an image has either a luminance table or a chrominance table, then it must have both tables.</description>
+	</tagMetadata>
+	<tagMetadata id="20625" category="">
+		<name>ChrominanceTable</name>
+		<description>Chrominance table. The luminance table and the chrominance table are used to control JPEG quality. A valid luminance or chrominance table has 64 entries of type Short. If an image has either a luminance table or a chrominance table, then it must have both tables.</description>
+	</tagMetadata>
+	<tagMetadata id="20736" category="">
+		<name>FrameDelay</name>
+		<description>Time delay, in hundredths of a second, between two frames in an animated GIF image.</description>
+	</tagMetadata>
+	<tagMetadata id="20737" category="">
+		<name>LoopCount</name>
+		<description>For an animated GIF image, the number of times to display the animation. A value of 0 specifies that the animation should be displayed infinitely.</description>
+	</tagMetadata>
+	<tagMetadata id="20752" category="">
+		<name>PixelUnit</name>
+		<description>Unit for PixelPerUnitX and PixelPerUnitY.</description>
+		<valueOptions>
+			<option key="0" value="unknown" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="20753" category="">
+		<name>PixelPerUnitX</name>
+		<description>Pixels per unit in the x direction.</description>
+	</tagMetadata>
+	<tagMetadata id="20754" category="">
+		<name>PixelPerUnitY</name>
+		<description>Pixels per unit in the y direction.</description>
+	</tagMetadata>
+	<tagMetadata id="20755" category="">
+		<name>PaletteHistogram</name>
+		<description>Palette histogram.</description>
+	</tagMetadata>
+	<tagMetadata id="33432" category="">
+		<name>Copyright</name>
+		<description>Null-terminated character string that contains copyright information.</description>
+	</tagMetadata>
+	<tagMetadata id="33434" category="EXIF">
+		<name>ExposureTime</name>
+		<description>Exposure time, measured in seconds.</description>
+		<formatInstr>FRACTION</formatInstr>
+	</tagMetadata>
+	<tagMetadata id="33437" category="EXIF">
+		<name>FNumber</name>
+		<description>F number.</description>
+	</tagMetadata>
+	<tagMetadata id="34665" category="EXIF">
+		<name>IFD</name>
+		<description>Private tag used by GDI+. Not for public use. GDI+ uses this tag to locate Exif-specific information.</description>
+	</tagMetadata>
+	<tagMetadata id="34675" category="">
+		<name>ICCProfile</name>
+		<description>ICC profile embedded in the image.</description>
+	</tagMetadata>
+	<tagMetadata id="34850" category="EXIF">
+		<name>ExposureProg</name>
+		<description>Class of the program used by the camera to set exposure when the picture is taken.</description>
+		<valueOptions>
+			<option key="0" value="Not defined" />
+			<option key="1" value="Manual" />
+			<option key="2" value="Normal program" />
+			<option key="3" value="Aperture priority" />
+			<option key="4" value="Shutter priority" />
+			<option key="5" value="Creative program (biased toward depth of field)" />
+			<option key="6" value="Action program (biased toward fast shutter speed)" />
+			<option key="7" value="Portrait mode (for closeup photos with the background out of focus)" />
+			<option key="8" value="Landscape mode (for landscape photos with the background in focus)" />
+			<optionRange from="9" to="255" value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="34852" category="EXIF">
+		<name>SpectralSense</name>
+		<description>Null-terminated character string that specifies the spectral sensitivity of each channel of the camera used. The string is compatible with the standard developed by the ASTM Technical Committee.</description>
+	</tagMetadata>
+	<tagMetadata id="34853" category="">
+		<name>GpsIFD</name>
+		<description>Offset to a block of GPS property items. Property items whose tags have the prefix Gps are stored in the GPS block. The GPS property items are defined in the EXIF specification. GDI+ uses this tag to locate GPS information, but GDI+ does not expose this tag for public use.</description>
+	</tagMetadata>
+	<tagMetadata id="34855" category="EXIF">
+		<name>ISOSpeed</name>
+		<description>ISO speed and ISO latitude of the camera or input device as specified in ISO 12232.</description>
+	</tagMetadata>
+	<tagMetadata id="34856" category="EXIF">
+		<name>OECF</name>
+		<description>Optoelectronic conversion function (OECF) specified in ISO 14524. The OECF is the relationship between the camera optical input and the image values.</description>
+	</tagMetadata>
+	<tagMetadata id="36864" category="EXIF">
+		<name>Ver</name>
+		<description>Version of the EXIF standard supported. Nonexistence of this field is taken to mean nonconformance to the standard. Conformance to the standard is indicated by recording 0210 as a 4-byte ASCII string. Because the type is Undefined, there is no NULL terminator.</description>
+		<formatInstr>ALLCHAR</formatInstr>
+	</tagMetadata>
+	<tagMetadata id="36867" category="EXIF">
+		<name>DTOrig</name>
+		<description>Date and time when the original image data was generated. For a DSC, the date and time when the picture was taken. The format is YYYY:MM:DD HH:MM:SS with time shown in 24-hour format and the date and time separated by one blank character (0x2000). The character string length is 20 bytes including the NULL terminator. When the field is empty, it is treated as unknown.</description>
+	</tagMetadata>
+	<tagMetadata id="36868" category="EXIF">
+		<name>DTDigitized</name>
+		<description>Date and time when the image was stored as digital data. If, for example, an image was captured by DSC and at the same time the file was recorded, then DateTimeOriginal and DateTimeDigitized will have the same contents. The format is YYYY:MM:DD HH:MM:SS with time shown in 24-hour format and the date and time separated by one blank character (0x2000). The character string length is 20 bytes including the NULL terminator. When the field is empty, it is treated as unknown.</description>
+	</tagMetadata>
+	<tagMetadata id="37121" category="EXIF">
+		<name>CompConfig</name>
+		<description>Information specific to compressed data. The channels of each component are arranged in order from the first component to the fourth. For uncompressed data, the data arrangement is given in the PhotometricInterp tag. However, because PhotometricInterp can only express the order of Y, Cb, and Cr, this tag is provided for cases when compressed data uses components other than Y, Cb, and Cr and to support other sequences.</description>
+	</tagMetadata>
+	<tagMetadata id="37122" category="EXIF">
+		<name>CompBPP</name>
+		<description>Information specific to compressed data. The compression mode used for a compressed image is indicated in unit BPP.</description>
+	</tagMetadata>
+	<tagMetadata id="37377" category="EXIF">
+		<name>ShutterSpeed</name>
+		<description>Shutter speed. The unit is the Additive System of Photographic Exposure (APEX) value.</description>
+	</tagMetadata>
+	<tagMetadata id="37378" category="EXIF">
+		<name>Aperture</name>
+		<description>Lens aperture. The unit is the Additive System of Photographic Exposure (APEX) value.</description>
+	</tagMetadata>
+	<tagMetadata id="37379" category="EXIF">
+		<name>Brightness</name>
+		<description>Brightness value. The unit is the Additive System of Photographic Exposure (APEX) value. Ordinarily it is given in the range of -99.99 to 99.99.</description>
+	</tagMetadata>
+	<tagMetadata id="37380" category="EXIF">
+		<name>ExposureBias</name>
+		<description>Exposure bias. The unit is the Additive System of Photographic Exposure (APEX) value. Ordinarily it is given in the range -99.99 to 99.99.</description>
+	</tagMetadata>
+	<tagMetadata id="37381" category="EXIF">
+		<name>MaxAperture</name>
+		<description>Smallest F number of the lens. The unit is the Additive System of Photographic Exposure (APEX) value. Ordinarily it is given in the range of 00.00 to 99.99, but it is not limited to this range.</description>
+	</tagMetadata>
+	<tagMetadata id="37382" category="EXIF">
+		<name>SubjectDist</name>
+		<description>Distance to the subject, measured in meters.</description>
+	</tagMetadata>
+	<tagMetadata id="37383" category="EXIF">
+		<name>MeteringMode</name>
+		<description>Metering mode.</description>
+		<valueOptions>
+			<option key="0" value="unknown" />
+			<option key="1" value="Average" />
+			<option key="2" value="CenterWeightedAverage" />
+			<option key="3" value="Spot" />
+			<option key="4" value="MultiSpot" />
+			<option key="5" value="Pattern" />
+			<option key="6" value="Partial" />
+			<optionRange from="7" to="254" value="reserved" />
+			<option key="255" value="other" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="37384" category="EXIF">
+		<name>LightSource</name>
+		<description>Type of light source.</description>
+		<valueOptions>
+			<option key="0" value="unknown" />
+			<option key="1" value="Daylight" />
+			<option key="2" value="Fluorescent" />
+			<option key="3" value="Tungsten" />
+			<option key="17" value="Standard light A" />
+			<option key="18" value="Standard light B" />
+			<option key="19" value="Standard light C" />
+			<option key="20" value="D55" />
+			<option key="21" value="D65" />
+			<option key="22" value="D75" />
+			<optionRange from="23" to="254" value="reserved" />
+			<option key="255" value="other" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="37385" category="EXIF">
+		<name>Flash</name>
+		<description>Flash status. This tag is recorded when an image is taken using a strobe light (flash). Bit 0 indicates the flash firing status, and bits 1 and 2 indicate the flash return status.</description>
+		<valueOptions>
+			<option key="0" value="Flash did not fire" />
+			<option key="1" value="Flash fired" />
+			<option key="5" value="Strobe return light not detected" />
+			<option key="7" value="Strobe return light detected" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="37386" category="EXIF">
+		<name>FocalLength</name>
+		<description>Actual focal length, in millimeters, of the lens. Conversion is not made to the focal length of a 35 millimeter film camera.</description>
+	</tagMetadata>
+	<tagMetadata id="37500" category="EXIF">
+		<name>MakerNote</name>
+		<description>Note tag. A tag used by manufacturers of EXIF writers to record information. The contents are up to the manufacturer.</description>
+	</tagMetadata>
+	<tagMetadata id="37510" category="EXIF">
+		<name>UserComment</name>
+		<description>Comment tag. A tag used by EXIF users to write keywords or comments about the image besides those in ImageDescription and without the character-code limitations of the ImageDescription tag.</description>
+	</tagMetadata>
+	<tagMetadata id="37520" category="EXIF">
+		<name>DTSubsec</name>
+		<description>Null-terminated character string that specifies a fraction of a second for the DateTime tag.</description>
+	</tagMetadata>
+	<tagMetadata id="37521" category="EXIF">
+		<name>DTOrigSS</name>
+		<description>Null-terminated character string that specifies a fraction of a second for the ExifDTOrig tag.</description>
+	</tagMetadata>
+	<tagMetadata id="37522" category="EXIF">
+		<name>DTDigSS</name>
+		<description>Null-terminated character string that specifies a fraction of a second for the ExifDTDigitized tag.</description>
+	</tagMetadata>
+	<tagMetadata id="40960" category="EXIF">
+		<name>FPXVer</name>
+		<description>FlashPix format version supported by an FPXR file. If the FPXR function supports FlashPix format version 1.0, this is indicated similarly to ExifVer by recording 0100 as a 4-byte ASCII string. Because the type is Undefined, there is no NULL terminator.</description>
+		<valueOptions>
+			<option key="0100" value="FlashPix format version 1.0" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="40961" category="EXIF">
+		<name>ColorSpace</name>
+		<description>Color space specifier. Normally sRGB (=1) is used to define the color space based on the PC monitor conditions and environment. If a color space other than sRGB is used, Uncalibrated (=0xFFFF) is set. Image data recorded as Uncalibrated can be treated as sRGB when it is converted to FlashPix.</description>
+		<valueOptions>
+			<option key="1" value="sRGB" />
+			<option key="-1" value="Uncalibrated" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="40962" category="EXIF">
+		<name>PixXDim</name>
+		<description>Information specific to compressed data. When a compressed file is recorded, the valid width of the meaningful image must be recorded in this tag, whether or not there is padding data or a restart marker. This tag should not exist in an uncompressed file.</description>
+	</tagMetadata>
+	<tagMetadata id="40963" category="EXIF">
+		<name>PixYDim</name>
+		<description>Information specific to compressed data. When a compressed file is recorded, the valid height of the meaningful image must be recorded in this tag whether or not there is padding data or a restart marker. This tag should not exist in an uncompressed file. Because data padding is unnecessary in the vertical direction, the number of lines recorded in this valid image height tag will be the same as that recorded in the SOF.</description>
+	</tagMetadata>
+	<tagMetadata id="40964" category="EXIF">
+		<name>RelatedWav</name>
+		<description>The name of an audio file related to the image data. The only relational information recorded is the EXIF audio file name and extension (an ASCII string that consists of 8 characters plus a period (.), plus 3 characters). The path is not recorded. When you use this tag, audio files must be recorded in conformance with the EXIF audio format. Writers can also store audio data within APP2 as FlashPix extension stream data.</description>
+	</tagMetadata>
+	<tagMetadata id="40965" category="EXIF">
+		<name>Interop</name>
+		<description>Offset to a block of property items that contain interoperability information.</description>
+	</tagMetadata>
+	<tagMetadata id="41483" category="EXIF">
+		<name>FlashEnergy</name>
+		<description>Strobe energy, in Beam Candle Power Seconds (BCPS), at the time the image was captured.</description>
+	</tagMetadata>
+	<tagMetadata id="41484" category="EXIF">
+		<name>SpatialFR</name>
+		<description>Camera or input device spatial frequency table and SFR values in the image width, image height, and diagonal direction, as specified in ISO 12233.</description>
+	</tagMetadata>
+	<tagMetadata id="41486" category="EXIF">
+		<name>FocalXRes</name>
+		<description>Number of pixels in the image width (x) direction per unit on the camera focal plane. The unit is specified in ExifFocalResUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="41487" category="EXIF">
+		<name>FocalYRes</name>
+		<description>Number of pixels in the image height (y) direction per unit on the camera focal plane. The unit is specified in ExifFocalResUnit.</description>
+	</tagMetadata>
+	<tagMetadata id="41488" category="EXIF">
+		<name>FocalResUnit</name>
+		<description>Unit of measure for ExifFocalXRes and ExifFocalYRes.</description>
+		<valueOptions>
+			<option key="2" value="inch" />
+			<option key="3" value="centimeter" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="41492" category="EXIF">
+		<name>SubjectLoc</name>
+		<description>Location of the main subject in the scene. The value of this tag represents the pixel at the center of the main subject relative to the left edge. The first value indicates the column number, and the second value indicates the row number.</description>
+	</tagMetadata>
+	<tagMetadata id="41493" category="EXIF">
+		<name>ExposureIndex</name>
+		<description>Exposure index selected on the camera or input device at the time the image was captured.</description>
+	</tagMetadata>
+	<tagMetadata id="41495" category="EXIF">
+		<name>SensingMethod</name>
+		<description>Image sensor type on the camera or input device.</description>
+		<valueOptions>
+			<option key="1" value="Not defined" />
+			<option key="2" value="One-chip color area sensor" />
+			<option key="3" value="Two-chip color area sensor" />
+			<option key="4" value="Three-chip color area sensor" />
+			<option key="5" value="Color sequential area sensor" />
+			<option key="7" value="Trilinear sensor" />
+			<option key="8" value="Color sequential linear sensor" />
+			<optionOtherwise value="reserved" />
+		</valueOptions>
+	</tagMetadata>
+	<tagMetadata id="41728" category="EXIF">
+		<name>FileSource</name>
+		<description>The image source. If a DSC recorded the image, the value of this tag is 3.</description>
+	</tagMetadata>
+	<tagMetadata id="41729" category="EXIF">
+		<name>SceneType</name>
+		<description>The type of scene. If a DSC recorded the image, the value of this tag must be set to 1, indicating that the image was directly photographed.</description>
+	</tagMetadata>
+	<tagMetadata id="41730" category="EXIF">
+		<name>CfaPattern</name>
+		<description>The color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used. It does not apply to all sensing methods.</description>
+	</tagMetadata>
+</photoMetadata>
